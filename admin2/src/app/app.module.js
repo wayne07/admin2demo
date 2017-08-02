@@ -10,9 +10,9 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
-// import { ProductModule } from './products/product.module';
 var app_routing_module_1 = require("./app-routing.module");
 var welcome_component_1 = require("./home/welcome.component");
+var logbook_module_1 = require("./logbook/logbook.module");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -22,7 +22,7 @@ AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule,
             http_1.HttpModule,
-            // ProductModule,
+            logbook_module_1.LogbookModule,
             app_routing_module_1.AppRoutingModule
         ],
         declarations: [app_component_1.AppComponent, welcome_component_1.WelcomeComponent],

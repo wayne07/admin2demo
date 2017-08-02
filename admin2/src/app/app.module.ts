@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
-// import { ProductModule } from './products/product.module';
 import { AppRoutingModule } from './app-routing.module';
 import { WelcomeComponent } from './home/welcome.component';
+import { LogbookModule } from "./logbook/logbook.module";
 
 @NgModule({
   imports: [ BrowserModule,
              HttpModule,
-             // ProductModule,
+             LogbookModule,
              AppRoutingModule
            ],
   declarations: [ AppComponent, WelcomeComponent ],
