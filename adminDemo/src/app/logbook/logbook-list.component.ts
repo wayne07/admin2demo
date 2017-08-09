@@ -5,8 +5,8 @@ import {LogbookService} from "./logbook.service"
 
 @Component({
     moduleId: module.id,
-    templateUrl: 'logbook-list.component.html',
-    styleUrls: ['logbook-list.component.css']
+    templateUrl: './logbook-list.component.html',
+    styleUrls: ['./logbook-list.component.css']
 })
 
 export class LogbookListComponent implements OnInit{
