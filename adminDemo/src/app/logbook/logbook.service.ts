@@ -17,7 +17,7 @@ export class LogbookService {
     }
 
     getLogbookMessages(): Observable<ILogbookMessage[]> {
-        return this._http.get<ILogbookMessage>(this._logbookServiceUrl)
+        return this._http.get<ILogbookMessage[]>(this._logbookServiceUrl)
             .do(data => console.log('All: ' + JSON.stringify(data)))
             .catch(this.handleError);
     }
