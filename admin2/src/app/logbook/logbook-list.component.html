@@ -33,24 +33,24 @@
                     </tr>
                 </thead>
                 <tbody  *ngIf='logbookMessages && logbookMessages.length'>
-                    <!--<tr *ngFor='let product of products | productFilter:listFilter'>-->
-                        <!--<td><img *ngIf='showImage'-->
+                    <tr *ngFor='let logbookMessage of logbookMessages'>
+                        <td>{{logbookMessage.log_type}}
+                            <!--<img *ngIf='showImage'-->
                                  <!--[src]='product.imageUrl'-->
                                  <!--[title]='product.productName'-->
                                  <!--[style.width.px]='imageWidth'-->
                                  <!--[style.margin.px]='imageMargin'/>-->
-                        <!--</td>-->
-                        <!--<td><a [routerLink]="['/product', product.productId]">{{product.productName}}</a>-->
-                        <!--</td>-->
-                        <!--<td>{{ product.productCode | lowercase }}</td>-->
-                        <!--<td>{{ product.releaseDate }}</td>-->
-                        <!--<td>{{ product.price | currency:'USD':true:'1.2-2' }}</td>-->
-                        <!--<td>-->
-                            <!--<ai-star [rating]='product.starRating'-->
-                                     <!--(ratingClicked)='onRatingClicked($event)' >-->
-                            <!--</ai-star>-->
-                        <!--</td>-->
-                    <!--</tr>-->
+                        </td>
+                        <td>{{logbookMessage.text}}</td>
+                        <td>{{logbookMessage.timestamp}}</td>
+                        <td>{{logbookMessage.fk_action_type}}</td>
+                        <td>{{logbookMessage.dauer}}</td>
+                        <td>{{logbookMessage.message_type}}</td>
+                        <td>{{logbookMessage.text_1}}</td>
+                        <td>{{logbookMessage.timestamp_1}}</td>
+                        <td>{{logbookMessage.shortcut}}</td>
+                        <td>{{logbookMessage.name}}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
