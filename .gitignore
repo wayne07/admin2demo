@@ -26,3 +26,8 @@ hs_err_pid*
 *.iml
 *.ipr
 *.iws
+
+# generierte TypeScript Komponenten ausschließen
+node_modules/
+*.js
+*.js.map
