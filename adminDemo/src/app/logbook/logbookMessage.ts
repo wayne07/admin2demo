@@ -10,6 +10,7 @@ export interface ILogbookMessage {
     id_1: number    // ev_logbook_message
     message_type: string;
     text_1: string;
+    additional_message: string;
     fk_logbook: number;
     timestamp_1: string;
     id_2: number;   // ev_action_type
