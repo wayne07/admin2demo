@@ -7,6 +7,10 @@
         <div class='row'>
             <div class='col-md-2'>Date from:</div>
             <div class='col-md-4'>
+              <!--<datetimepicker data-ng-model="dateRangeStart"-->
+                              <!--data-datetimepicker-config="{ dropdownSelector: '#dropdownStart', renderOn: 'end-date-changed' }"-->
+                              <!--data-on-set-time="startDateOnSetTime()"-->
+                              <!--data-before-render="startDateBeforeRender($dates)"></datetimepicker>-->
                 <!--<input type='text' [(ngModel)]='listFilter'/>-->
             </div>
         </div>
@@ -33,7 +37,7 @@
                     </tr>
                 </thead>
                 <tbody  *ngIf='logbookMessages && logbookMessages.length'>
-                    <tr *ngFor='let logbookMessage of logbookMessages'>
+                    <tr *ngFor='let logbookMessage of filteredMessages'>
                         <td>{{logbookMessage.log_type}}
                             <!--<img *ngIf='showImage'-->
                                  <!--[src]='product.imageUrl'-->
