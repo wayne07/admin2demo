@@ -1,11 +1,23 @@
 import {NgModule} from "@angular/core";
 import {CommonModule} from '@angular/common';
 import {LogbookListComponent} from "./logbook-list.component";
-import {LogbookRoutingModule} from "./logbook-routing.module";
+import {RouterModule} from "@angular/router";
+import {LogbookService} from "./logbook.service";
 
 @NgModule({
-    imports: [LogbookRoutingModule, CommonModule],
-    declarations: [LogbookListComponent]
+    imports: [
+      CommonModule,
+      RouterModule.forChild([
+        { path: 'logbooks', component: LogbookListComponent }
+        // { path: 'product/:id',
+        //    canActivate: [ ProductDetailGuard ],
+        //    component: ProductDetailComponent }
+      ])
+    ],
+    declarations: [LogbookListComponent],
+    providers: [
+      LogbookService
+    ]
 })
 export class LogbookModule {
 }
